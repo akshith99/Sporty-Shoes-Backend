@@ -25,11 +25,11 @@ public class Order {
 	private Date orderDate;
 
 	@OneToOne()
-	@JoinColumn(unique = true)
+	@JoinColumn(name = "productId", unique = false)
 	private Product product;
 	
 	@OneToOne()
-	@JoinColumn(unique = true)
+	@JoinColumn(name = "userId", unique = false)
 	private User user;
 
 	public long getId() {

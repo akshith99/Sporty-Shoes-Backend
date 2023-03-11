@@ -20,10 +20,10 @@ public interface OrderDao extends JpaRepository<Order, Long> {
 	
 	
 
-	@Query("select o from Order o where  o.user.id = :userId")
+	@Query("select o from Order o where  o.user.userId = :userId")
 	public List<Order> getAllOrderByUserId(Long userId);
 	
-	@Query("select o from Order o where  o.product.id = :productId")
+	@Query("select o from Order o where  o.product.productId = :productId")
 	public List<Order> getAllOrderByProductId(Long productId);
 
 	@Query( value = "SELECT * FROM order_details",nativeQuery = true)

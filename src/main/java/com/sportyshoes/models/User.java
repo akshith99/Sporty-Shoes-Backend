@@ -10,13 +10,13 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private Long id;
+	@Column(name = "userId")
+	private Long userId;
 	
 	@Column(name = "name")
 	private String name;
@@ -28,11 +28,11 @@ public class User {
 	private String role;
 
 	public Long getId() {
-		return id;
+		return userId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(Long userId) {
+		this.userId = userId;
 	}
 
 	public String getName() {
